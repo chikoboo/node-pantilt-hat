@@ -1,0 +1,27 @@
+{
+  "name": "node-pantilt-hat",
+  "version": "1.0.0",
+  "description": "Pimoroni PanTilt servo and lighting HAT for node.js",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc index.ts && tsc index.ts -d"
+  },
+  "author": "chikoboo",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/i2c-bus": "^1.0.18",
+    "i2c-bus": "^3.2.0"
+  },
+  "types": "./index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:chikoboo/node-pantilt-hat.git"
+  },
+  "keywords": [
+    "Pimoroni",
+    "PanTilt",
+    "HAT",
+    "Raspberry",
+    "Pi"
+  ]
+}
