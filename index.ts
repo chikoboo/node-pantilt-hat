@@ -7,8 +7,8 @@ const CONFIG = 0x00;
 const REG_PAN_SERVO = 0x01;
 const REG_TILT_SERVO = 0x03;
 
-const SERVO_MIN = 575;
-const SERVO_MAX = 2325;
+export const SERVO_MIN = 575;
+export const SERVO_MAX = 2325;
 
 const IDLE_TIME = 2000; // ms
 
@@ -97,11 +97,11 @@ export class NodePanTilt {
         return config;
     }
 
-    private toServoDegrees(degrees: number): number {
+    toServoDegrees(degrees: number): number {
         return SERVO_MIN + Math.ceil(((SERVO_MAX - SERVO_MIN) / 180) * (degrees + 90));
     }
 
-    private toDegrees(servoDegrees: number): number {
-        return Math.round((servoDegrees - SERVO_MIN / (SERVO_MAX - SERVO_MIN)) * 180) - 90;
+    toDegrees(servoDegrees: number): number {
+        return Math.round(((servoDegrees - SERVO_MIN) / (SERVO_MAX - SERVO_MIN)) * 180.0) - 90;
     }
 }

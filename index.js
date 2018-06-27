@@ -6,8 +6,8 @@ var ADDR = 0x15;
 var CONFIG = 0x00;
 var REG_PAN_SERVO = 0x01;
 var REG_TILT_SERVO = 0x03;
-var SERVO_MIN = 575;
-var SERVO_MAX = 2325;
+exports.SERVO_MIN = 575;
+exports.SERVO_MAX = 2325;
 var IDLE_TIME = 2000; // ms
 var NodePanTilt = /** @class */ (function () {
     function NodePanTilt() {
@@ -81,10 +81,10 @@ var NodePanTilt = /** @class */ (function () {
         return config;
     };
     NodePanTilt.prototype.toServoDegrees = function (degrees) {
-        return SERVO_MIN + Math.ceil(((SERVO_MAX - SERVO_MIN) / 180) * (degrees + 90));
+        return exports.SERVO_MIN + Math.ceil(((exports.SERVO_MAX - exports.SERVO_MIN) / 180) * (degrees + 90));
     };
     NodePanTilt.prototype.toDegrees = function (servoDegrees) {
-        return Math.round((servoDegrees - SERVO_MIN / (SERVO_MAX - SERVO_MIN)) * 180) - 90;
+        return Math.round(((servoDegrees - exports.SERVO_MIN) / (exports.SERVO_MAX - exports.SERVO_MIN)) * 180.0) - 90;
     };
     return NodePanTilt;
 }());
