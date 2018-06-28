@@ -1,6 +1,6 @@
 {
   "name": "node-pantilt-hat",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Pimoroni PanTilt servo and lighting HAT for node.js",
   "main": "index.js",
   "scripts": {
