@@ -1,7 +1,9 @@
 node-pantilt-hat
 ====
+[![Build Status](https://travis-ci.org/chikoboo/node-pantilt-hat.svg?branch=master)](https://travis-ci.org/chikoboo/node-pantilt-hat)
 
 Pan-Tilt HAT for Node.js
+
 
 ## Install
 ```
